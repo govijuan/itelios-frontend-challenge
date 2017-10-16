@@ -31,10 +31,16 @@ module.exports = function(grunt){
 		  	files: '_source/**/*.scss',
 		  	tasks: ['sass']
 		  }
-		}
+		},
+		serve: {
+        options: {
+            port: 9000
+        }
+    }
 	});
 	grunt.loadNpmTasks('grunt-contrib-coffee');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.registerTask('default', ['sass', 'coffee']);
+	grunt.loadNpmTasks('grunt-serve');
 };
