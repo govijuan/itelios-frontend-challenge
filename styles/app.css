@@ -1,3 +1,81 @@
+/* ====================
+		** Basic Styles **
+   ==================== */
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif; }
 
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+.grid-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /*@media (min-width: 768px ){
+  	width: 750px;
+  }
+  @media (min-width: 992px){
+  	width: 970px;
+  }
+  @media (min-width: 1200px){
+  	width: 1170px;
+  }*/ }
+
+/* =======================
+		** Big divs Styles **
+   ======================= */
+.item-visto-wrap, .recom-item-list-wrap {
+  float: left; }
+
+@media (min-width: 992px) {
+  .item-visto-wrap {
+    width: 33.33%; } }
+
+@media (min-width: 992px) {
+  .recom-item-list-wrap {
+    width: 66.66%; } }
+
+.recom-item-list {
+  padding-left: 0;
+  width: 100%; }
+
+/* ==========================
+		** Lory Slider Styles **
+   ========================== */
+.frame {
+  /**
+   * (optional) wrapper width, specifies width of the slider frame.
+   */
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.slides {
+  display: inline-block; }
+
+.recom-item-wrap {
+  position: relative;
+  display: inline-block;
+  width: 33.33%;
+  /**
+   * (optional) if the content inside the slide element has a defined size.
+   */ }
 
 /*# sourceMappingURL=app.css.map */
