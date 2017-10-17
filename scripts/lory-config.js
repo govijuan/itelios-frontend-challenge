@@ -3,19 +3,30 @@ document.addEventListener('DOMContentLoaded', function () {
   var dot_count         = simple_dots.querySelectorAll('.js_slide').length;
   var dot_container     = simple_dots.querySelector('.slider_navigation_dots');
   var dot_list_item     = document.createElement('li');
-
+  console.log(dot_container.childNodes);
   function handleDotEvent(e) {
       if (e.type === 'before.lory.init') {
-        for (var i = 0, len = dot_count; i < len; i++) {
+        for (var i = 0, len = dot_count / 3; i < len; i++) {
           var clone = dot_list_item.cloneNode();
           dot_container.appendChild(clone);
         }
         dot_container.childNodes[0].classList.add('active');
       }
       if (e.type === 'after.lory.init') {
-        for (var i = 0, len = dot_count; i < len; i++) {
+        for (var i = 0, len = dot_count / 3; i < len; i++) {
+          var linkSpace;
+            if(i == 0){
+              linkSpace = 0;
+            }else if(i == 1){
+              linkSpace = 0;
+            }else if(i == 2){
+              linkSpace = 3;
+            }else if(i == 3){
+              linkSpace = 6;
+            }
           dot_container.childNodes[i].addEventListener('click', function(e) {
-            dot_navigation_slider.slideTo(Array.prototype.indexOf.call(dot_container.childNodes, e.target));
+            console.log(linkSpace);
+            dot_navigation_slider.slideTo((Array.prototype.indexOf.call(dot_container.childNodes, e.target) + linkSpace));
           });
         }
       }
@@ -23,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for (var i = 0, len = dot_container.childNodes.length; i < len; i++) {
           dot_container.childNodes[i].classList.remove('active');
         }
-        dot_container.childNodes[e.detail.currentSlide - 1].classList.add('active');
+        dot_container.childNodes[e.detail.currentSlide - 3].classList.add('active');
       }
       if (e.type === 'on.lory.resize') {
           for (var i = 0, len = dot_container.childNodes.length; i < len; i++) {
@@ -39,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var dot_navigation_slider = lory(simple_dots, {
       infinite: 3,
+      slidesToScroll: 3,
       enableMouseEvents: true
   });
 });

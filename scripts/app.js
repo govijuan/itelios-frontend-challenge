@@ -24,7 +24,7 @@
         return printRecommList(recommItemsListObj);
       }
     };
-    dataXhttp.open('GET', "products.json", true);
+    dataXhttp.open('GET', "products.json", false);
     return dataXhttp.send();
   };
 

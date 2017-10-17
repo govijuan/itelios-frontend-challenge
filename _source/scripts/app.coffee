@@ -14,7 +14,7 @@ loadJSON = (callback)->
 			recommItemsListObj = dataArray.recommendation
 			console.log dataArray
 			printRecommList(recommItemsListObj)
-	dataXhttp.open('GET', "products.json", true)
+	dataXhttp.open('GET', "products.json", false)
 	dataXhttp.send()
 ### Função que Inicia procesos do javascript ###
 init = ()->

@@ -91,4 +91,18 @@ h6 {
     /**
      * (optional) if the content inside the slide element has a defined size.
      */
+
+}
+.slider_navigation_dots{
+	li{
+		background-color: #eee; // grey the BG
+    border: 1px solid #666; // border with box shadow... oooooh aaaaaah
+    border-radius: 5px; // round them cause... dots
+    box-shadow: inset 1px 1px 1px #888; // make them pretty
+    display: inline-block; // inline cause row
+    height: 10px; // set the height of the dots
+    width: 10px; // set the width of the dots
+    margin: 0 5px; // space the dots
+    cursor: pointer; // cursor pointer for UX feedback
+	}
 }
