@@ -1,0 +1,18 @@
+/* ===============================
+		** Slider styles overwride **
+   =============================== */
+.slick-dots{
+	bottom: -36px!important;
+	li{
+		margin: 0;
+		width: 16px;
+		button::before{
+			font-size: 30px;
+		}
+	} 
+}
+.slick-dotted{
+	.slick-slider{
+		margin-bottom: 46px!important;
+	}
+}

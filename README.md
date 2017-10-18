@@ -37,3 +37,25 @@ O objetivo do desafio é simples: Consumir uma json via xhttp e, com o resultado
 - Não utilização de bibliotecas ou frameworks
 - Fidelidade ao design proposto
 - Adaptação mobile
+
+
+
+# Desenvolvimento #
+
+
+## Como executar o Projeto ##
+
+1. Foi desenvolvido usando Grunt, instalado por NPM, então precisa ter o nodejs instalado na máquina/servidor. 
+  * [Clique aqui](https://nodejs.org/) e veja como instalar o NodeJs. 
+2. Baixe o zip ou clone o repositório deste fork
+3. Navegue com o terminal de commandos até o diretório do repositório e execute o commando 'npm install' (o arquivo 'package.json' contem as informações dos arquivos a serem instalados pelo NPM)
+4. Quando os 'node modules' estiverem instalados pode dar o commando 'grunt serve' para iniciar o servidor.
+5. Tendo iniciado o servidor do grunt (sem servidor não da para consumir o json via xhttp) digite o endereço http://localhost:9000/index.html ou [clique aqui](http://localhost:9000/index.html) para visualizar o projeto.
+
+## Descrição de Funcionalidades ##
+
+O javascript do app.js feito por mim, é gerado de um arquivo coffeescript localizado na pasta '_source/scripts/' usando o módulo npm chamado 'grunt-contrib-coffee
+'. Então usei o coffeescript como transpiler do javascript puro.
+A prateleira foi gerada usando Vanilla JS encontrado no arquivo 'scripts/app.js', mas o carrossel foi gerado por uma biblioteca chamada 'slick JS', que depende da biblioteca Jquery.
+Os estilos construidos de forma modular no scss e importado num único arquivo para produzir o arquivo 'styles/app.css', incluindo a biblioteca slick ('_source/styles/slick.scss' e '_source/styles/slick-theme.scss'), são gerados usando o módulo 'grunt-contrib-sass'.
+Usei um arquivo index.html para inserir os dados da chamada xhttp usando um Vanila JS criado por mim no arquivo app.js.

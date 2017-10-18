@@ -18,9 +18,7 @@ module.exports = function(grunt){
 		sass: {                             
 	    dist: {                         
 	      files: {                         
-	        'styles/app.css': '_source/styles/app.scss',
-	        'styles/slick.css': '_source/styles/slick.scss',
-	        'styles/slick-theme.css': '_source/styles/slick-theme.scss'      // 'destination': 'source'
+	        'styles/app.css': '_source/styles/app.scss'  // 'destination': 'source'
 	      }
 	    }
 	  },
@@ -36,7 +34,13 @@ module.exports = function(grunt){
 		},
 		serve: {
         options: {
-            port: 9000
+            port: 9000,
+            'aliases': {
+            	'index.html': {
+	            	tasks: ['sass', 'coffee'],
+	            	output: 'stdout'
+	            }
+            }
         }
     }
 	});
