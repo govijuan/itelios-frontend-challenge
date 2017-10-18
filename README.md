@@ -50,7 +50,7 @@ O objetivo do desafio é simples: Consumir uma json via xhttp e, com o resultado
 2. Baixe o zip ou clone o repositório deste fork
 3. Navegue com o terminal de commandos até o diretório do repositório e execute o commando 'npm install' (o arquivo 'package.json' contem as informações dos arquivos a serem instalados pelo NPM)
 4. Quando os 'node modules' estiverem instalados pode dar o commando 'grunt serve' para iniciar o servidor.
-5. Tendo iniciado o servidor do grunt (sem servidor não da para consumir o json via xhttp) digite o endereço http://localhost:9000/index.html ou [clique aqui](http://localhost:9000/index.html) para visualizar o projeto.
+5. Tendo iniciado o servidor do grunt (sem servidor não da para consumir o json via xhttp) digite o endereço http://localhost:9000/index.html na barra de seu navegador web ou [clique aqui](http://localhost:9000/index.html) para visualizar o projeto.
 
 ## Descrição de Funcionalidades ##
 
