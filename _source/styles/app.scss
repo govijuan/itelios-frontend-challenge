@@ -1,9 +1,15 @@
 /* ====================
 		** Basic Styles **
    ==================== */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
 body {
 	overflow-x: hidden;
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
 }
 
 a,
@@ -22,12 +28,15 @@ h5,
 h6 {
 	font-family: 'Roboto Condensed', sans-serif;
 }
-
+div{
+	display: block;
+}
 .grid-container{
 	margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 1290px;
 	/*@media (min-width: 768px ){
 		width: 750px;
 	}
@@ -42,67 +51,146 @@ h6 {
 /* =======================
 		** Big divs Styles **
    ======================= */
-.item-visto-wrap, .recom-item-list-wrap{
-	float: left;
+.prateleira-section{
+	display: block;
 }
-.item-visto-wrap{
+.item-visto-wrap, .recom-item-list-wrap{
 	@media (min-width: 768px ){
+		float: left;
 
 	}
-	@media (min-width: 992px){
+	
+}
+.item-visto-wrap{
+	@media (max-width: 767px){
+		max-width: 322px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media (min-width: 768px ){
+		//max-width: 322px;
 		width: 33.33%
+	}
+	@media (min-width: 992px){
+		width: 25%;
 	}
 }
 .recom-item-list-wrap{
+	@media (max-width: 767px){
+		max-width: 322px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media (min-width: 768px ){
+		width: 66.66%;
+	}
 	@media (min-width: 992px){
-		width: 66.66%
+		width: 75%;
 	}
 }
 .recom-item-list{
 	padding-left: 0;
 	width: 100%;
 }
-/* ==========================
-		** Lory Slider Styles **
-   ========================== */
-.slider {}
-
-.frame {
-    /**
-     * (optional) wrapper width, specifies width of the slider frame.
-     */
-    width: 100%;
-
-    position: relative;
-    font-size: 0;
-    line-height: 0;
-    overflow: hidden;
-    white-space: nowrap;
+.shelf-item-wrap{
+	padding: 15px;
+	border-right: 1px solid #edeaea;
+	border-top: 1px solid #edeaea;
+	border-bottom: 1px solid #edeaea;
+	border-left: 1px solid #edeaea;
 }
-
-.slides {
-    display: inline-block;
-}
-
-.recom-item-wrap{
-    position: relative;
-    display: inline-block;
-    width: 33.33%;
-    /**
-     * (optional) if the content inside the slide element has a defined size.
-     */
-
-}
-.slider_navigation_dots{
-	li{
-		background-color: #eee; // grey the BG
-    border: 1px solid #666; // border with box shadow... oooooh aaaaaah
-    border-radius: 5px; // round them cause... dots
-    box-shadow: inset 1px 1px 1px #888; // make them pretty
-    display: inline-block; // inline cause row
-    height: 10px; // set the height of the dots
-    width: 10px; // set the width of the dots
-    margin: 0 5px; // space the dots
-    cursor: pointer; // cursor pointer for UX feedback
+.shelf-item-wrap:hover{
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.07) 0%, rgba(0,0,0,0.07) 2%, rgba(0,0,0,0.03) 58%, rgba(0,0,0,0.03) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 2%,rgba(0,0,0,0.03) 58%,rgba(0,0,0,0.03) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 2%,rgba(0,0,0,0.03) 58%,rgba(0,0,0,0.03) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', endColorstr='#08000000',GradientType=0 ); /* IE6-9 */
+	.add-cart-wrap{
+		display: block!important;
 	}
 }
+.frame{
+	margin-right: -4px;
+	.shelf-item-wrap{
+		margin-left: -1px;
+	}
+	.shelf-item-wrap:first-child{
+		margin-left: -2px;
+	}
+}
+
+.prateleira-wrap{
+	h2{
+		color: #5e6774;
+		padding: 0 0 0 15px;
+	}
+}
+
+/* ==========================
+		** Shelf Items Styles **
+   ========================== */
+.item-description{
+	color: #303132;
+	font-size: 13px;
+	@media (min-width: 1291px){
+		min-height: 70px;
+	}
+	@media (max-width: 1290px){
+		min-height: 88px;
+	}
+}
+.item-price-wrap{
+	padding: 15px 0;
+	font-size: 13px;
+	color: #5e6774;
+	.item-price{
+		color: #353f4f;
+		font-family: 'Roboto Condensed', sans-serif; 
+		font-size: 16px;
+	}
+}
+.pay-conditions{
+	font-size: 13px;
+	color: #5e6774;
+	.pay-cond-fees{
+		font-size: 14px;
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #353f4f;
+	}
+}
+.item-img-div{
+	img{
+		width: 100%;
+	}
+}
+.add-cart-wrap {
+	display: none;
+  padding-top: 15px;
+  .ad-to-cart-btn{
+  	width: 100%;
+  	line-height: 45px;
+  	font-size: 14px;
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #353f4f;
+		cursor: pointer;
+  	.cart-icon-img{
+  		display: inline-block;
+	    vertical-align: middle;
+  	}
+  }
+  .ad-to-cart-btn:hover{
+
+  }
+}
+
+/* ===============================
+		** Slider styles overwride **
+   =============================== */
+.slick-dots{
+	li{
+		margin: 0;
+		width: 16px;
+		button::before{
+			font-size: 30px;
+		}
+	} 
+} 
